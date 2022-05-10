@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Me</title>
+  <!--This link associates the css file 'styles.css'-->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <h1>My Contact Details</h1>
+<p>✈: 123 Address Street</p>
+<p>☎: 000-111-2222</p>
+<p>✉: thisemail@gmail.com</p>
+<hr>
+<!--https://www.w3schools.com/charsets/ref_emoji.asp this link for acceptable UTF-8 symbols and others. Used this site to get the unicodes for the symbols above-->
+
+<form action="mailto:brendakim2019@gmail.com" method="post" enctype="text/plain">
+  <!--enctype="text/plain" allows so that your information doesn't send with weird symbols-so plain text is sent-->
+<label for="">Your Name:</label>
+<input type="text" name="yourName"placeholder="Eg: John Doe" required>
+<br>
+<label for="">Your Email:</label>
+<input type="email" name="yourEmail"placeholder="Eg: default@gmail.com" required>
+<br>
+<label for="">Your Message:</label>
+<br>
+<textarea name="yourMessage" id="" cols="38" rows="8" placeholder="Enter Message Here. Max: 300 characters" minlength=0 maxlength=300></textarea>
+<br>
+<input type="submit" value="Send Information">
+<br><br>
+<a href="index.html">Home Page</a>
+
+</form>
+
+</body>
+
+</html>
+
+
+<!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form-->

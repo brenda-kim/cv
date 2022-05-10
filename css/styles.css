@@ -1,0 +1,62 @@
+/*CSS comments*/
+
+body {
+  background-color: #F3E9DD;
+  color: #DAB88B;
+  font-family: "trebuchet ms", verdana, helvetica, sans-serif;
+  /*Good practice to use helvetica over arial as it looks a tad better*/
+  /*Other good font-family to use: "courier new", georgia, "times new roman", verdana*/
+  /*mobile OSes don't widely have "trebuchet ms" */
+  /*Good to use font-family and list as I did above with various alternatives after the preferred font in case a certain browsers or whatever don't have the particular font*/
+  /*for fonts that have multiple words, need to put in quotes*/
+}
+
+hr {
+border-style:none;
+border-top-style: dotted;
+border-color: #FDF6EC;
+border-width: 10px;
+width: 5%;
+}
+
+h1{
+  color: #B7CADB;
+text-decoration: underline wavy;
+text-shadow: 1px 1px 1px grey,
+             2px 2px 1px grey;
+}
+
+h3{
+color: #B7CADB;
+text-shadow: 4px 4px 5px #DAB88B;
+  }
+
+a{
+color: #DAB88B;
+}
+
+ul{
+  list-style: circle inside;
+  /*can also do square and replace inside with outside*/
+  /*https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists*/
+}
+
+a:link {
+  color: #A0BCC2;
+}
+a:visited {
+  color: #E6BA95;
+}
+a:focus {
+  border-bottom: 1px solid;
+  background: #FDF6EC;
+}
+a:hover {
+  border-bottom: 1px solid;
+  background: #FDF6EC;
+}
+a:active {
+  background: #E6BA95;
+  color: #FDF6EC;
+}
+/*https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links*/

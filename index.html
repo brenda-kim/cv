@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Brenda's Personal Site</title>
+  <!--This link associates the css file 'css/styles.css'. Must have the entirety of the where the file can be found. Since it is in a different folder within HTML-personal site, must do "css/styles.css". -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!--Not recommended to add CSS styling within HTML document (INTERNAL CSS) within body because have to manually add/change/remove every single "style" eg: style="background-color: powderblue;". For background, that's okay; however, gets bad when there are multiple elements to customize such as hr.-->
+  <!--Also not recommended to add styling within HTML document within head (still INTERNAL CSS); though better than above body method) because if website has numerous pages, you still have to copy/paste the styling into every different page's head section.-->
+  <!--*********RECOMMENDED: EXTERNAL CSS:  What we really want is to have a SINGLE location where when we CHANGE the CSS styles in that one location, then EVERYTHING gets REFLECTED across our website in ALL of the pages. Made a styles.css file within a css folder within the HTML personal site main folder. Input the codes for styling there and then put a link under the title thats under head element (see above) in every file thats associated with the respective css. This will ensure that all site pages are consistent and any changes will collectively change without any deviation or mistakes.*************** -->
+
+  <!--Note: There are always default values of CSS within every browser so check out this website and adjust as needed:
+   https://www.w3schools.com/cssref/css_default_values.asp
+-if for example, you want to change the border-style of hr, since its original default is "inset" and unsure what other optoins there are, just google, and one of the top searches are: https://developer.mozilla.org/en-US/docs/Web/CSS/border-style
+YOu can then choose the style you want from there and use it as seen below-->
+  <!--You can also choose to make height and width px; however, if you want that to be consistent as u make a page wider or narrower on your desktop or appear the same on mobile, its not good to use px because its a set amt. Instead, use a percentage like 30% or 10% as it will then auto adjust to whatever browser or size or mobile thing you are using :)-->
+
+  <!-- Use angela's method. It removes the need for adding the extra colors to get rid of those unwanted lines of different colors. It's more efficient.
+my method:
+<style>
+hr{
+  background-color: #F3E9DD;
+  border-color: #F3E9DD;
+  border-top: dotted #FDF6EC 10px;
+  width: 5%;
+  border-left: #F3E9DD;
+}
+</style>
+
+angela method:
+<style>
+hr{
+  border-style:none;       *****MUST GO BEFORE border-top-style & Imp because invalidates other borders (bottom, left, right)*******
+  border-top-style: dotted;
+  border-color: #FDF6EC;
+  border-width: 10px;
+  width: 5%;
+}
+</style>
+  -->
+
+</head>
+
+<body>
+
+  <table cellspacing="20">
+    <!--cellspacing adds some space between data spaces. it is an attribute. for more attributes, check out MDN for tables-->
+    <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table-->
+    <tr>
+      <td><img src="roundimg1.png" alt="Brenda profile picture" height="175px"></td>
+      <!--can either use the images that are already in the html personal site folder by the names as indicated above OR copy and paste image source link from web OR copy the file folder link in its entirety: file:///C:/Users/brend/Desktop/Angela%20Web%20Dev%20Course/HTML%20-%20Personal%20Site/roundimg1.png-->
+
+      <td>
+        <h1>Brenda Kim</h1>
+        <p><em><a href="https://en.wikipedia.org/wiki/Doctor_of_Pharmacy">PharmD</a> and <strong>Web Development Student</strong></em></p>
+        <p>I am an aspiring web developer. I love matcha and make my own milk teas.</p>
+      </td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <h3>Education</h3>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/Primary_school">Elementary School</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Middle_school">Junior High School</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Secondary_school">High School</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Pharmacy_school">Pharmacy School</a></li>
+  </ul>
+
+  <hr>
+
+  <h3>Work Experience</h3>
+  <!--general blueprint of a table format-->
+  <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table-->
+  <table cellspacing="10">
+    <thead>
+      <!--note: dont need to always put things in thead or tfoot-->
+      <tr>
+        <th>Dates</th>
+        <th>Work</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2016-2019</td>
+        <td>Pharmacy Intern at Pharmacy</td>
+      </tr>
+      <tr>
+        <td>2019</td>
+        <td>P4 Student at Pharmacies</td>
+      </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+
+  <hr>
+
+  <h3>Skills</h3>
+  <!--so all of the below stuff is original tables i made, but as it is, it is only appearing as 1 column. in order to make it 2 columns, need to separate it as you want and nest the table in its entirety in a new table. see code after comment............
+  <table>
+    <thead>      *note: don't need thead necessarily*
+    </thead>
+    <tbody>
+    <tr>
+      <td>Data Entry</td>
+      <td>★★★★★</td>
+    </tr>
+    <tr>
+      <td>Customer Service</td>
+      <td>★★★★★</td>
+    </tr>
+    <tr>
+      <td>Attention to Detail</td>
+      <td>★★★★★</td>
+    </tr>
+
+      <tr>
+      <td>Korean Language</td>
+      <td>★★★★☆</td>
+    </tr>
+    <tr>
+      <td>Web Development</td>
+      <td>★☆☆☆☆</td>
+    </tr>
+    <tr>
+      <td>iOS Development</td>
+      <td>☆☆☆☆☆</td>
+    </tr>
+    </tbody>
+    <tfoot>      *note: don't need tfoot necessarily*
+    </tfoot>
+  </table>
+-->
+  <!--secondary note: this method is not ideal to make tables as it can get very confusing and not recommended but is possible to make with HTML; just a fyi kind of thing if it comes down to it -->
+  <table cellspacing="10">
+    <tr>
+      <td>
+        <table>
+          <tbody>
+            <tr>
+              <td>Data Entry</td>
+              <td>★★★★★</td>
+            </tr>
+            <tr>
+              <td>Customer Service</td>
+              <td>★★★★★</td>
+            </tr>
+            <tr>
+              <td>Attention to Detail</td>
+              <td>★★★★★</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+
+      <td>
+        <table>
+          <tbody>
+            <tr>
+              <td>Korean Language</td>
+              <td>★★★★☆</td>
+            </tr>
+            <tr>
+              <td>Web Development</td>
+              <td>★☆☆☆☆</td>
+            </tr>
+            <tr>
+              <td>iOS Development</td>
+              <td>☆☆☆☆☆</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+
+  <a href="hobbies.html">My Hobbies</a>
+  |
+  <a href="contact.html">Contact Me</a>
+
+</body>
+
+</html>
